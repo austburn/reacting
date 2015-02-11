@@ -7,9 +7,9 @@ People = React.createClass({
   render: function () {
     return (
       <ul>
-        {this.props.people.map(function (person) {
-          return <Person name={person.name} number={person.number} />
-        })}
+        {this.props.people.map(function (person, i) {
+          return <Person key={i} name={person.name} number={person.number} removePerson={this.props.removePerson.bind(this, i)} />
+        }, this)}
       </ul>
     );
   }

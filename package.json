@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "bundle": "browserify -t reactify -e ./app/index.jsx -o ./dist/bundle.js",
-    "server": "http-server ./dist"
+    "server": "npm run bundle && http-server ./dist"
   },
   "author": "",
   "license": "ISC",
